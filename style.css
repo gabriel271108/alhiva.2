@@ -1,0 +1,345 @@
+/* ===== RESET ===== */
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#fdf6f9;
+color:#333;
+}
+
+/* ===== HEADER ===== */
+
+header{
+background:linear-gradient(#9fe0c3,#5ec4b5);
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+header h1{
+margin:0;
+font-size:2.5em;
+}
+
+header p{
+font-size:1.1em;
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#9fe0c3,#5ec4b5);
+color:white;
+}
+
+.titulo{
+font-size:70px;
+letter-spacing:6px;
+margin-bottom:10px;
+animation:aparecer 1.5s ease;
+}
+
+.bienvenida{
+font-size:26px;
+margin-bottom:10px;
+animation:aparecer 2s ease;
+}
+
+.eslogan{
+font-size:18px;
+opacity:0.9;
+margin-bottom:40px;
+animation:aparecer 2.5s ease;
+}
+
+/* ===== BOTONES ===== */
+
+.botones{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+animation:subir 3s ease;
+}
+
+.btn{
+padding:15px 35px;
+background:white;
+color:#5ec4b5;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:#ff6fb5;
+color:white;
+}
+
+/* ===== CONTENEDOR PRODUCTOS ===== */
+
+.contenedor{
+max-width:1100px;
+margin:40px auto;
+padding:0 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* ===== TARJETA PRODUCTO ===== */
+
+.producto{
+background:white;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+overflow:hidden;
+cursor:pointer;
+transition:transform .3s;
+text-align:center;
+}
+
+.producto:hover{
+transform:translateY(-5px);
+}
+
+/* ===== IMAGEN PRODUCTO ===== */
+
+.producto img{
+width:100%;
+height:auto;
+max-height:300px;
+object-fit:contain;
+background:white;
+}
+
+/* ===== TITULO PRODUCTO ===== */
+
+.nombre-producto{
+font-size:1.2rem;
+font-weight:600;
+color:#eb32c9;
+margin:12px 10px 8px;
+letter-spacing:.5px;
+}
+
+/* ===== INFO PRODUCTO ===== */
+
+.info{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+padding:0 15px;
+}
+
+.info p{
+margin:10px 0;
+font-size:.95rem;
+line-height:1.4;
+color:black;
+}
+
+.precio{
+font-weight:bold;
+color:black;
+}
+
+.producto.activo .info{
+max-height:200px;
+padding-bottom:15px;
+}
+
+/* ===== LINKS ===== */
+
+a{
+text-decoration:none;
+color:black;
+}
+
+/* ===== WHATSAPP ===== */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-size:16px;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+z-index:1000;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+background:#f3d6e3;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-size:.9em;
+}
+
+/* ===== ANIMACIONES ===== */
+
+@keyframes aparecer{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes subir{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== RESPONSIVE TABLET ===== */
+
+@media (max-width:768px){
+
+header{
+padding:60px 15px;
+}
+
+header h1{
+font-size:28px;
+}
+
+header p{
+font-size:16px;
+}
+
+.titulo{
+font-size:42px;
+}
+
+.bienvenida{
+font-size:20px;
+}
+
+.eslogan{
+font-size:16px;
+}
+
+.logo{
+width:65px;
+height:65px;
+}
+
+.producto img{
+max-height:250px;
+}
+
+.whatsapp-btn{
+font-size:14px;
+padding:12px 16px;
+bottom:15px;
+right:15px;
+}
+
+}
+
+/* ===== RESPONSIVE TELEFONO ===== */
+
+/* ===== RESPONSIVE TELEFONO ===== */
+
+@media (max-width:768px){
+
+header{
+padding:60px 15px;
+}
+
+/* titulo */
+
+.titulo{
+font-size:38px;
+}
+
+.bienvenida{
+font-size:18px;
+}
+
+.eslogan{
+font-size:15px;
+}
+
+/* botones */
+
+.botones{
+flex-direction:column;
+gap:15px;
+}
+
+.btn{
+width:90%;
+text-align:center;
+}
+
+/* contenedor productos */
+
+.contenedor{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+padding:15px;
+}
+
+/* tarjeta producto */
+
+.producto{
+width:100%;
+}
+
+/* imagen producto */
+
+.producto img{
+width:100%;
+height:auto;
+max-height:none;
+}
+
+/* logo */
+
+.logo{
+width:70px;
+height:70px;
+}
+
+}

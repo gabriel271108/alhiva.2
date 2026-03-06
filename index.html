@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Alhiva</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<img src="img/logo.jpg" alt="Logo Macrobiótica" class="logo">
+
+<h1 class="titulo">ALHIVA</h1>
+
+<p class="bienvenida">Bienvenido a nuestra tienda</p>
+
+<p class="eslogan">Bienestar natural para tu cuerpo</p>
+
+<div class="botones">
+
+<a href="femenino.html" class="btn">Femenino</a>
+
+<a href="masculino.html" class="btn">Masculino</a>
+
+<a href="https://wa.me/50683470018" class="btn">Contacto</a>
+
+</div>
+
+</header>
+
+<!-- PRODUCTOS -->
+
+<section class="contenedor">
+
+<div class="producto">
+<img src="img/producto1.jpg" alt="">
+<h3>Producto 1</h3>
+<p>Descripción corta</p>
+<p class="precio">₡20,000</p>
+</div>
+
+<div class="producto">
+<img src="img/producto2.jpg" alt="">
+<h3>Producto 2</h3>
+<p>Descripción corta</p>
+<p class="precio">₡18,000</p>
+</div>
+
+</section>
+
+<script>
+
+const productos = document.querySelectorAll('.producto');
+
+productos.forEach(producto => {
+producto.addEventListener('click', () => {
+producto.classList.toggle('activo');
+});
+});
+
+</script>
+
+</body>
+</html>
